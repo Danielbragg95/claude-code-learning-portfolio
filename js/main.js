@@ -48,6 +48,7 @@ class PortfolioApp {
         this.initScrollAnimations();
         this.initNavigation();
         this.initThemeToggle();
+        this.initSoundToggle();
         this.initTerminal();
         this.initMagneticEffects();
         this.initCounters();
@@ -55,10 +56,21 @@ class PortfolioApp {
         this.initContactForm();
         this.initVisitorCounter();
 
-        // Show loading screen for 3 seconds
-        setTimeout(() => {
+        // Show loading screen for 2 seconds or until page is fully loaded
+        const hideLoadingTimer = setTimeout(() => {
             this.hideLoadingScreen();
-        }, 3000);
+        }, 2000);
+
+        // Also hide when page is fully loaded (fallback)
+        if (document.readyState === 'complete') {
+            clearTimeout(hideLoadingTimer);
+            setTimeout(() => this.hideLoadingScreen(), 500);
+        } else {
+            window.addEventListener('load', () => {
+                clearTimeout(hideLoadingTimer);
+                setTimeout(() => this.hideLoadingScreen(), 500);
+            });
+        }
 
         console.log('🎉 Portfolio initialized with Claude Code assistance!');
     }
@@ -96,6 +108,11 @@ class PortfolioApp {
 
     hideLoadingScreen() {
         const loadingScreen = document.getElementById('loading-screen');
+        if (!loadingScreen) {
+            console.warn('Loading screen element not found');
+            return;
+        }
+
         loadingScreen.classList.add('hidden');
 
         // Remove from DOM after animation
