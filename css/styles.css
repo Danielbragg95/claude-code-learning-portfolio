@@ -273,11 +273,6 @@ body {
     color: var(--accent-color);
 }
 
-.logo-bracket {
-    color: var(--text-secondary);
-    opacity: 0.7;
-}
-
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -770,9 +765,11 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
-    align-items: start;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
 }
 
 .story-cards {
@@ -1405,9 +1402,11 @@ body {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
-    align-items: start;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
 }
 
 .contact-info {
