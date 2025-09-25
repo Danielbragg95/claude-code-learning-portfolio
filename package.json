@@ -23,7 +23,7 @@
     "seo-check": "node scripts/seo-check.js",
     "lighthouse": "lighthouse http://localhost:8000 --output json --output html --output-path ./lighthouse-report",
     "generate-sitemap": "node scripts/generate-sitemap.js",
-    "compress-images": "node scripts/compress-images.js"
+    "compress-images": "echo 'Image compression placeholder - add imagemin if needed'"
   },
   "repository": {
     "type": "git",
