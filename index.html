@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO Meta Tags -->
+    <title>Claude Code Learning Portfolio | AI-Assisted Development Journey</title>
+    <meta name="description" content="Explore my coding journey powered by Claude Code - showcasing AI-assisted development, interactive projects, and cutting-edge web technologies.">
+    <meta name="keywords" content="Claude Code, AI coding, portfolio, web development, glassmorphism, interactive design">
+    <meta name="author" content="Daniel Bragg">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Claude Code Learning Portfolio">
+    <meta property="og:description" content="Discover the future of coding with AI assistance - my interactive portfolio powered by Claude Code">
+    <meta property="og:image" content="./assets/images/og-preview.png">
+    <meta property="og:url" content="https://github.com/Danielbragg95/claude-code-learning-portfolio">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Claude Code Learning Portfolio">
+    <meta name="twitter:description" content="Interactive portfolio showcasing AI-assisted coding journey">
+    <meta name="twitter:image" content="./assets/images/twitter-preview.png">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Preloads for Performance -->
+    <link rel="preload" href="./css/styles.css" as="style">
+    <link rel="preload" href="./js/main.js" as="script">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Your Name",
+        "jobTitle": "AI-Assisted Developer",
+        "description": "Passionate developer exploring the future of coding with Claude Code",
+        "url": "https://yourusername.github.io/claude-code-learning-portfolio",
+        "sameAs": [
+            "https://github.com/yourusername",
+            "https://linkedin.com/in/yourusername"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="claude-logo">
+                <div class="logo-text">Claude Code</div>
+                <div class="loading-spinner"></div>
+            </div>
+            <div class="loading-text">Initializing AI-powered portfolio...</div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particle-background" class="particle-background"></div>
+
+    <!-- Mouse Trail -->
+    <canvas id="mouse-trail" class="mouse-trail"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">ClaudeCode</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#journey" class="nav-link" data-section="journey">Journey</a>
+                <a href="#terminal" class="nav-link" data-section="terminal">Terminal</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="sound-toggle" aria-label="Toggle sound">
+                    <span class="sound-icon">🔊</span>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section" data-scroll>
+            <div class="hero-background">
+                <div class="code-rain"></div>
+                <div class="constellation"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Your Name</span>
+                        <span class="cursor">|</span>
+                    </h1>
+
+                    <div class="hero-subtitle">
+                        <span class="typewriter"
+                              data-strings="AI-Assisted Developer,Claude Code Explorer,Future of Coding,Interactive Designer,Problem Solver">
+                        </span>
+                    </div>
+
+                    <p class="hero-description">
+                        Exploring the boundaries of what's possible when human creativity
+                        meets AI assistance. Welcome to my coding journey powered by Claude Code.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="365">0</span>
+                            <span class="stat-label">Days Coding</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="1000">0</span>
+                            <span class="stat-label">Claude Interactions</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <button class="cta-primary" data-magnetic>
+                            <span>Explore My Work</span>
+                            <span class="cta-arrow">→</span>
+                        </button>
+                        <button class="cta-secondary" data-magnetic>
+                            <span>Download Resume</span>
+                            <span class="download-icon">↓</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <div class="editor-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="editor-title">claude-code-session.md</div>
+                        </div>
+                        <div class="editor-content">
+                            <div class="code-line">
+                                <span class="line-number">1</span>
+                                <span class="code-text">
+                                    <span class="comment"># Claude Code Learning Journey</span>
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">2</span>
+                                <span class="code-text"></span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">3</span>
+                                <span class="code-text">
+                                    <span class="keyword">const</span>
+                                    <span class="variable">future</span> =
+                                    <span class="string">"AI + Human Creativity"</span>
+                                </span>
+                            </div>
+                            <div class="code-line typing">
+                                <span class="line-number">4</span>
+                                <span class="code-text">
+                                    <span class="function">console.log</span>(<span class="string">"Building amazing things..."</span>)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="scroll-text">Scroll to explore</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section" data-scroll>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">The story behind the code</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-story">
+                        <div class="story-cards">
+                            <div class="story-card" data-reveal>
+                                <div class="card-icon">🚀</div>
+                                <h3>The Beginning</h3>
+                                <p>Started my coding journey with curiosity and determination, exploring traditional development approaches.</p>
+                            </div>
+
+                            <div class="story-card" data-reveal>
+                                <div class="card-icon">🤖</div>
+                                <h3>Discovering AI</h3>
+                                <p>Encountered Claude Code and realized the transformative power of AI-assisted development.</p>
+                            </div>
+
+                            <div class="story-card" data-reveal>
+                                <div class="card-icon">⚡</div>
+                                <h3>Acceleration</h3>
+                                <p>Productivity skyrocketed as I learned to collaborate effectively with AI tools.</p>
+                            </div>
+
+                            <div class="story-card" data-reveal>
+                                <div class="card-icon">🌟</div>
+                                <h3>Innovation</h3>
+                                <p>Now pushing boundaries, creating projects that blend human creativity with AI capabilities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-details">
+                        <div class="detail-section">
+                            <h3>Philosophy</h3>
+                            <p>I believe the future of development lies in the symbiotic relationship between human creativity and AI assistance. Claude Code has revolutionized how I approach problems, learn new technologies, and build innovative solutions.</p>
+                        </div>
+
+                        <div class="detail-section">
+                            <h3>Approach</h3>
+                            <ul class="approach-list">
+                                <li>AI-first development methodology</li>
+                                <li>Rapid prototyping and iteration</li>
+                                <li>Focus on user experience and accessibility</li>
+                                <li>Continuous learning and adaptation</li>
+                                <li>Open source contribution and sharing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section" data-scroll>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">AI-assisted creations that push boundaries</p>
+                </div>
+
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="ai">AI/ML</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be dynamically loaded -->
+                    <div class="project-card" data-category="web" data-reveal>
+                        <div class="card-front">
+                            <div class="project-image">
+                                <img src="./assets/images/project1-preview.jpg" alt="Interactive Dashboard" loading="lazy">
+                                <div class="project-overlay">
+                                    <div class="project-badges">
+                                        <span class="badge">React</span>
+                                        <span class="badge">D3.js</span>
+                                        <span class="badge">Claude Code</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Interactive Data Dashboard</h3>
+                                <p>Real-time analytics platform built with Claude Code assistance</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="project-details">
+                                <h3>Interactive Data Dashboard</h3>
+                                <p>A comprehensive analytics platform featuring real-time data visualization, interactive charts, and responsive design. Built entirely with Claude Code assistance.</p>
+                                <div class="project-features">
+                                    <ul>
+                                        <li>Real-time data updates</li>
+                                        <li>Interactive visualizations</li>
+                                        <li>Mobile-responsive design</li>
+                                        <li>Dark/light theme support</li>
+                                    </ul>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link" target="_blank">
+                                        <span>Live Demo</span>
+                                        <span class="link-icon">↗</span>
+                                    </a>
+                                    <a href="#" class="project-link" target="_blank">
+                                        <span>GitHub</span>
+                                        <span class="link-icon">→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More project cards will be added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section" data-scroll>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <p class="section-subtitle">Tools and technologies in my AI-assisted arsenal</p>
+                </div>
+
+                <div class="skills-content">
+                    <div class="skill-categories">
+                        <div class="skill-category" data-reveal>
+                            <h3>Frontend Development</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">JavaScript/TypeScript</span>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">React/Next.js</span>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">CSS/SCSS</span>
+                                        <span class="skill-level">Expert</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category" data-reveal>
+                            <h3>AI-Assisted Development</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Claude Code</span>
+                                        <span class="skill-level">Expert</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="98"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Prompt Engineering</span>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="88"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-constellation">
+                        <div class="constellation-container">
+                            <!-- Interactive skill nodes will be generated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Journey Section -->
+        <section id="journey" class="section journey-section" data-scroll>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Learning Journey</h2>
+                    <p class="section-subtitle">Milestones in my AI-assisted development path</p>
+                </div>
+
+                <div class="journey-timeline">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 - Q1</div>
+                            <h3>First Claude Code Session</h3>
+                            <p>Discovered the power of AI-assisted coding and completed my first project with Claude's help.</p>
+                            <div class="timeline-achievement">
+                                <span class="achievement-badge">🎯 First Steps</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 - Q2</div>
+                            <h3>Advanced Techniques</h3>
+                            <p>Mastered prompt engineering and learned to collaborate effectively with AI for complex projects.</p>
+                            <div class="timeline-achievement">
+                                <span class="achievement-badge">🚀 Level Up</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 - Q3</div>
+                            <h3>Portfolio Creation</h3>
+                            <p>Built this stunning portfolio entirely with Claude Code assistance, showcasing the possibilities.</p>
+                            <div class="timeline-achievement">
+                                <span class="achievement-badge">✨ Showcase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal Section -->
+        <section id="terminal" class="section terminal-section" data-scroll>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Try Claude Code</h2>
+                    <p class="section-subtitle">Experience AI-assisted development in action</p>
+                </div>
+
+                <div class="terminal-container">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="terminal-title">claude-code-demo</div>
+                        </div>
+
+                        <div class="terminal-body">
+                            <div class="terminal-content" id="terminal-content">
+                                <div class="terminal-line">
+                                    <span class="prompt">claude-code $</span>
+                                    <span class="command">Welcome to the interactive demo!</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="output">Try these commands: help, projects, skills, joke</span>
+                                </div>
+                            </div>
+
+                            <div class="terminal-input-line">
+                                <span class="prompt">claude-code $</span>
+                                <input type="text" class="terminal-input" id="terminal-input"
+                                       placeholder="Type a command..." autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section" data-scroll>
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">Ready to explore AI-assisted development together?</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item" data-reveal>
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" data-reveal>
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <a href="https://linkedin.com/in/yourusername" target="_blank">Connect with me</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" data-reveal>
+                            <div class="contact-icon">🐙</div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/yourusername" target="_blank">View my repos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn" data-magnetic>
+                                <span>Send Message</span>
+                                <span class="submit-icon">→</span>
+                            </button>
+                        </form>
+
+                        <div class="form-status" id="form-status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 2024 Your Name. Built with ❤️ and Claude Code.</p>
+                <p class="footer-note">This entire portfolio was created using AI assistance - showcasing the future of development.</p>
+            </div>
+
+            <div class="footer-stats">
+                <div class="visitor-counter">
+                    <span class="counter-label">Visitors:</span>
+                    <span class="counter-number" id="visitor-count">1,234</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Elements -->
+    <audio id="hover-sound" preload="auto">
+        <source src="./assets/sounds/hover.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="click-sound" preload="auto">
+        <source src="./assets/sounds/click.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="./js/main.js" defer></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed'));
+        }
+    </script>
+
+    <!-- Easter Egg: Konami Code -->
+    <script>
+        // Konami code: ↑↑↓↓←→←→BA
+        const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        let konamiIndex = 0;
+
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    // Easter egg activated!
+                    document.body.classList.add('developer-mode');
+                    console.log('🎉 Developer mode activated! Welcome to the matrix...');
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+    </script>
+</body>
+</html>
