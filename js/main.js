@@ -498,15 +498,18 @@ class PortfolioApp {
 
     executeTerminalCommand(command) {
         const terminalContent = document.getElementById('terminal-content');
-        if (!terminalContent) return;
+        if (!terminalContent) {
+            console.error('Terminal content element not found');
+            return;
+        }
 
         // Add command to terminal
-        this.addTerminalLine(`claude-code $ ${command}`, 'command');
+        this.addTerminalLine(`${command}`, 'command');
 
         // Execute command
         if (command === 'clear') {
             terminalContent.innerHTML = '';
-            this.addTerminalLine('claude-code $ Welcome back! Type "help" for available commands.', 'output');
+            this.addTerminalLine('Terminal cleared. Type "help" for available commands.', 'output');
         } else if (this.terminalCommands[command]) {
             const output = typeof this.terminalCommands[command] === 'function'
                 ? this.terminalCommands[command]()
@@ -515,7 +518,10 @@ class PortfolioApp {
         } else if (command.startsWith('echo ')) {
             const text = command.substring(5);
             this.addTerminalLine(text, 'output');
-        } else if (command) {
+        } else if (command.trim() === '') {
+            // Empty command, just show prompt
+            return;
+        } else {
             this.addTerminalLine(`Command not found: ${command}. Type "help" for available commands.`, 'error');
         }
 
@@ -530,13 +536,16 @@ class PortfolioApp {
 
         const line = document.createElement('div');
         line.className = `terminal-line ${type}`;
+        line.style.opacity = '0';
 
         if (type === 'command') {
-            line.innerHTML = `<span class="prompt">claude-code $</span> <span class="command">${text.replace('claude-code $ ', '')}</span>`;
+            line.innerHTML = `<span class="prompt">claude-code $</span> <span class="command">${text}</span>`;
         } else if (type === 'error') {
-            line.innerHTML = `<span class="output error">${text}</span>`;
+            line.innerHTML = `<span class="output" style="color: #ef4444;">${text}</span>`;
         } else {
-            line.innerHTML = `<span class="output">${text}</span>`;
+            // Handle multi-line output
+            const formattedText = text.replace(/\n/g, '<br>');
+            line.innerHTML = `<span class="output">${formattedText}</span>`;
         }
 
         terminalContent.appendChild(line);
