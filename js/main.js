@@ -441,14 +441,19 @@ class PortfolioApp {
     // Theme Toggle
     initThemeToggle() {
         const themeToggle = document.querySelector('.theme-toggle');
-        if (!themeToggle) return;
+        if (!themeToggle) {
+            console.warn('Theme toggle element not found');
+            return;
+        }
 
         // Get saved theme or default to dark
         const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
         this.updateThemeIcon(savedTheme);
+        console.log('Theme initialized:', savedTheme);
 
-        themeToggle.addEventListener('click', () => {
+        themeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
@@ -456,6 +461,7 @@ class PortfolioApp {
             localStorage.setItem('portfolio-theme', newTheme);
             this.updateThemeIcon(newTheme);
             this.playSound('switch');
+            console.log('Theme switched to:', newTheme);
         });
     }
 
@@ -801,19 +807,39 @@ class PortfolioApp {
     // Sound toggle
     initSoundToggle() {
         const soundToggle = document.querySelector('.sound-toggle');
-        if (!soundToggle) return;
+        if (!soundToggle) {
+            console.warn('Sound toggle element not found');
+            return;
+        }
 
-        soundToggle.addEventListener('click', () => {
+        // Initialize sound icon
+        const icon = soundToggle.querySelector('.sound-icon');
+        if (icon) {
+            icon.textContent = this.soundEnabled ? '🔊' : '🔇';
+        }
+
+        soundToggle.addEventListener('click', (e) => {
+            e.preventDefault();
             this.soundEnabled = !this.soundEnabled;
-            const icon = soundToggle.querySelector('.sound-icon');
+
             if (icon) {
                 icon.textContent = this.soundEnabled ? '🔊' : '🔇';
             }
 
+            console.log('Sound toggled:', this.soundEnabled);
+
+            // Play a test sound to confirm it's working
             if (this.soundEnabled) {
-                this.playSound('switch');
+                this.playTestSound();
             }
         });
+    }
+
+    playTestSound() {
+        // Play a more noticeable test sound
+        this.playTone(800, 0.2, 0.3);
+        setTimeout(() => this.playTone(600, 0.2, 0.2), 100);
+        setTimeout(() => this.playTone(1000, 0.3, 0.2), 200);
     }
 
     // Utility functions
